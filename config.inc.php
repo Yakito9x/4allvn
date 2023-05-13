@@ -37,12 +37,12 @@ Typecho_Common::init();
 /** 不用ssl的tls就为空 vercel用ssl连接mysql默认不动 */
 $db = new Typecho_Db('Pdo_Mysql', 'typecho_');
 $db->addServer(array (
-  'host' => 'mysql-all4vn.alwaysdata.net',
-  'user' => 'all4vn',
-  'password' => 'HuuPhuong@123',
+  'host' => 'none',
+  'user' => 'none',
+  'password' => 'none',
   'charset' => 'utf8mb4',
   'port' => '3306',
-  'database' => 'all4vn_blog',
+  'database' => 'none',
   'engine' => 'InnoDB',
   'tls' => '/etc/pki/tls/certs/ca-bundle.crt'
 ), Typecho_Db::READ | Typecho_Db::WRITE);
