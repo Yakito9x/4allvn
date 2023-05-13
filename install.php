@@ -760,13 +760,13 @@ function install_step_1_perform()
     $writeable = true;
     if (is_dir($realUploadDir)) {
         if (!is_writeable($realUploadDir) || !is_readable($realUploadDir)) {
-            if (!@chmod($realUploadDir, 0755)) {
-                $writeable = false;
+            if (!@chmod($realUploadDir, 0777)) {
+                $writeable = true;
             }
         }
     } else {
-        if (!@mkdir($realUploadDir, 0755)) {
-            $writeable = false;
+        if (!@mkdir($realUploadDir, 0777)) {
+            $writeable = true;
         }
     }
 
